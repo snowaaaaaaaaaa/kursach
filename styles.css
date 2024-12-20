@@ -132,7 +132,7 @@ main {
 .book-title {
     font-size: 18px;
     font-weight: bold;
-    color: #fa0202;
+    color: #ff0000;
     margin: 0 0 5px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
@@ -215,7 +215,7 @@ header {
 }
 
 header h1 {
-    color: #e60000;
+    color: #ff0000;
     font-size: 30px;
     margin: 0;
     padding: 5px 0;
@@ -366,7 +366,7 @@ position: fixed;
 
 .links h2 {
     font-size: 36px;
-    color: #e60000;
+    color: #ff0000;
     margin-bottom: 20px;
 }
 
@@ -398,7 +398,7 @@ position: fixed;
 }
 
 .link-text {
-    color: #e60000;
+    color: #ff0000;
     font-size: 24px;
     text-decoration: none;
     display: block;
