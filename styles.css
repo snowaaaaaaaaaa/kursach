@@ -42,7 +42,7 @@ main {
 
 .sidebar .selected {
     background-color: #e60000;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 .book-list {
@@ -75,7 +75,7 @@ main {
 
 .book-list ul li strong {
     font-size: 18px;
-    color: #e60000;
+    color: #ff0000;
 }
 
 .book-list ul li em {
@@ -90,28 +90,41 @@ main {
 
 .books-container {
     display: flex;
-    flex-wrap: nowrap; 
-    gap: 20px; 
-    padding: 10px; 
-    overflow-x: auto; 
+    flex-wrap: wrap; /* Позволяет переносить книги на новую строку */
+    gap: 20px;
+    padding: 10px;
+    justify-content: center; /* Центрирует книги, если место осталось */
 }
 
 .book-item {
-    width: calc(20% - 10px); 
+    flex: 1 1 calc(20% - 20px); /* Устанавливает адаптивную ширину */
+    max-width: 200px; /* Ограничение ширины книги */
     background-color: #2e2e2e;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-    height: 300px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: space-between; 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .book-item:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        flex: 1 1 calc(50% - 20px); /* Две книги в ряд на средних экранах */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item {
+        flex: 1 1 calc(100% - 20px); /* Одна книга в ряд на маленьких экранах */
+    }
 }
 
 .book-image {
@@ -292,7 +305,7 @@ nav ul li a:hover {
     font-size: 48px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #e60000;
+    color: #ff0000;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 10px;
 }
@@ -366,7 +379,7 @@ position: fixed;
 
 .links h2 {
     font-size: 36px;
-    color: #ff0000;
+    color: #e60000;
     margin-bottom: 20px;
 }
 
@@ -398,7 +411,7 @@ position: fixed;
 }
 
 .link-text {
-    color: #ff0000;
+    color: #e60000;
     font-size: 24px;
     text-decoration: none;
     display: block;
